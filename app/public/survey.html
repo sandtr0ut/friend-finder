@@ -134,7 +134,7 @@
     <br>
     
     <h1>Question 9</h1>
-    <h2>The DMV sucks</h2>
+    <h2>Cats Smell Funny</h2>
     <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dd9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Select and Option
         </button>
@@ -161,6 +161,7 @@
                 <button class="dropdown-item" type="button" value="5">5 (Strongly Agree)</button>
             </div>
     </div>
+    
     <br>
     <br>
     
@@ -182,6 +183,38 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- Client-Side Logic -->
+    <script>
+    $("#submit").on("click", function(event) {
+        event.preventDefault();
+        
+        var answers = {
+            name: $("#name").val(),
+            photo: $("#photo").val(),
+            scores: [
+                $("dd1").val(),
+                $("dd2").val(),
+                $("dd3").val(),
+                $("dd4").val(),
+                $("dd5").val(),
+                $("dd6").val(),
+                $("dd7").val(),
+                $("dd8").val(),
+                $("dd9").val(),
+                $("dd10").val(),
+            ]
+        };
+        
+        console.log(answers);
+        
+        // post user info to api and receive results of the compatibility test
+        $.post("/api/friends", answers, function(data) {
+            console.log(data);
+        })
+        
+    })
+    </script>
 </body>
 
 </html>
