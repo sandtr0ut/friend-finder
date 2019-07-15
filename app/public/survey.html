@@ -1,220 +1,317 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
     <title>Survey</title>
+
+    <style>
+        .select-answer::-ms-expand {
+            display: none;
+        }
+
+        .select-answer:hover {
+            border-color: #888;
+        }
+
+        .select-answer:focus {
+            border-color: #aaa;
+            box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
+            box-shadow: 0 0 0 3px -moz-mac-focusring;
+            color: #222;
+            outline: none;
+        }
+
+        .select-answer option {
+            font-weight: normal;
+        }
+
+        body {
+            padding: 3rem;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Question 1</h1>
-    <h2>I would rather eat a bowl of hair than a bowl of teeth</h2>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dd1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Select and Option
-        </button>
-            <div class="dropdown-menu" aria-labelledby="dd1">
-                <button class="dropdown-item" type="button" value="1">1 (Strongly Disagree)</button>
-                <button class="dropdown-item" type="button" value="2">2</button>
-                <button class="dropdown-item" type="button" value="3">3</button>
-                <button class="dropdown-item" type="button" value="4">4</button>
-                <button class="dropdown-item" type="button" value="5">5 (Strongly Agree)</button>
+    <form>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validationName">Name</label>
+                <input type="text" class="form-control" id="validationName" placeholder="(required)" required>
             </div>
-    </div>
-    <br>
-    
-    <h1>Question 2</h1>
-    <h2>Bruce Willis > Chuck Norris</h2>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dd2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Select and Option
-        </button>
-            <div class="dropdown-menu" aria-labelledby="dd2">
-                <button class="dropdown-item" type="button" value="1">1 (Strongly Disagree)</button>
-                <button class="dropdown-item" type="button" value="2">2</button>
-                <button class="dropdown-item" type="button" value="3">3</button>
-                <button class="dropdown-item" type="button" value="4">4</button>
-                <button class="dropdown-item" type="button" value="5">5 (Strongly Agree)</button>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="validationPhoto">Photo</label>
+                <input type="text" class="form-control" id="validationPhoto" placeholder="Link to Image File (required)"
+                    required>
             </div>
+        </div>
+
+    </form>
+
+    <div>
+        <h1>Q1</h1>
+        <h2>I would rather eat a bowl of hair than a bowl of teeth.</h2>
+        <select class="answer-select" id="dd1">
+            <option class="dropdown-placeholder">Select an Option</option>
+            <option class="dropdown-item" value="1">
+                1 (Strongly Disagree)
+            </option>
+            <option class="dropdown-item" value="2">2</option>
+            <option class="dropdown-item" value="3">3</option>
+            <option class="dropdown-item" value="4">4</option>
+            <option class="dropdown-item" value="5">
+                5 (Strongly Agree)
+            </option>
+        </select>
+        <br />
+
+        <h1>Q2</h1>
+        <h2>Bruce Willis > Chuck Norris.</h2>
+        <select class="answer-select" id="dd2">
+            <option class="dropdown-placeholder">Select an Option</option>
+            <option class="dropdown-item" value="1">
+                1 (Strongly Disagree)
+            </option>
+            <option class="dropdown-item" value="2">2</option>
+            <option class="dropdown-item" value="3">3</option>
+            <option class="dropdown-item" value="4">4</option>
+            <option class="dropdown-item" value="5">
+                5 (Strongly Agree)
+            </option>
+        </select>
+        <br />
+
+        <h1>Q3</h1>
+        <h2>Ninjas are fun for the whole family.</h2>
+        <select class="answer-select" id="dd3">
+            <option class="dropdown-placeholder">Select an Option</option>
+            <option class="dropdown-item" value="1">
+                1 (Strongly Disagree)
+            </option>
+            <option class="dropdown-item" value="2">2</option>
+            <option class="dropdown-item" value="3">3</option>
+            <option class="dropdown-item" value="4">4</option>
+            <option class="dropdown-item" value="5">
+                5 (Strongly Agree)
+            </option>
+        </select>
+        <br />
+
+        <h1>Q4</h1>
+        <h2>Intelligent life exists outside of our solar system.</h2>
+        <select class="answer-select" id="dd4">
+            <option class="dropdown-placeholder">Select an Option</option>
+            <option class="dropdown-item" value="1">
+                1 (Strongly Disagree)
+            </option>
+            <option class="dropdown-item" value="2">2</option>
+            <option class="dropdown-item" value="3">3</option>
+            <option class="dropdown-item" value="4">4</option>
+            <option class="dropdown-item" value="5">
+                5 (Strongly Agree)
+            </option>
+        </select>
+        <br />
+
+        <h1>Q5</h1>
+        <h2>Gamers are sexy.</h2>
+        <select class="answer-select" id="dd5">
+            <option class="dropdown-placeholder">Select an Option</option>
+            <option class="dropdown-item" value="1">
+                1 (Strongly Disagree)
+            </option>
+            <option class="dropdown-item" value="2">2</option>
+            <option class="dropdown-item" value="3">3</option>
+            <option class="dropdown-item" value="4">4</option>
+            <option class="dropdown-item" value="5">
+                5 (Strongly Agree)
+            </option>
+        </select>
+        <br />
+
+        <h1>Q6</h1>
+        <h2>Attraction is not a choice.</h2>
+        <select class="answer-select" id="dd6">
+            <option class="dropdown-placeholder">Select an Option</option>
+            <option class="dropdown-item" value="1">
+                1 (Strongly Disagree)
+            </option>
+            <option class="dropdown-item" value="2">2</option>
+            <option class="dropdown-item" value="3">3</option>
+            <option class="dropdown-item" value="4">4</option>
+            <option class="dropdown-item" value="5">
+                5 (Strongly Agree)
+            </option>
+        </select>
+        <br />
+
+        <h1>Q7</h1>
+        <h2>Weird is better than Cool.</h2>
+        <select class="answer-select" id="dd7">
+            <option class="dropdown-placeholder">Select an Option</option>
+            <option class="dropdown-item" value="1">
+                1 (Strongly Disagree)
+            </option>
+            <option class="dropdown-item" value="2">2</option>
+            <option class="dropdown-item" value="3">3</option>
+            <option class="dropdown-item" value="4">4</option>
+            <option class="dropdown-item" value="5">
+                5 (Strongly Agree)
+            </option>
+        </select>
+        <br />
+
+        <h1>Q8</h1>
+        <h2>Disco deserves a comeback.</h2>
+        <select class="answer-select" id="dd8">
+            <option class="dropdown-placeholder">Select an Option</option>
+            <option class="dropdown-item" value="1">
+                1 (Strongly Disagree)
+            </option>
+            <option class="dropdown-item" value="2">2</option>
+            <option class="dropdown-item" value="3">3</option>
+            <option class="dropdown-item" value="4">4</option>
+            <option class="dropdown-item" value="5">
+                5 (Strongly Agree)
+            </option>
+        </select>
+        <br />
+
+        <h1>Q9</h1>
+        <h2>Cats Smell Funny.</h2>
+        <select class="answer-select" id="dd9">
+            <option class="dropdown-placeholder">Select an Option</option>
+            <option class="dropdown-item" value="1">
+                1 (Strongly Disagree)
+            </option>
+            <option class="dropdown-item" value="2">2</option>
+            <option class="dropdown-item" value="3">3</option>
+            <option class="dropdown-item" value="4">4</option>
+            <option class="dropdown-item" value="5">
+                5 (Strongly Agree)
+            </option>
+        </select>
+        <br />
+
+        <h1>Q10</h1>
+        <h2>It is absolutely possible to fold space.</h2>
+        <select class="answer-select" id="dd10">
+            <option class="dropdown-placeholder">Select an Option</option>
+            <option class="dropdown-item" value="1">
+                1 (Strongly Disagree)
+            </option>
+            <option class="dropdown-item" value="2">2</option>
+            <option class="dropdown-item" value="3">3</option>
+            <option class="dropdown-item" value="4">4</option>
+            <option class="dropdown-item" value="5">
+                5 (Strongly Agree)
+            </option>
+        </select>
+        <br />
+        <br />
     </div>
-    <br>
-    
-    <h1>Question 3</h1>
-    <h2>Ninjas are fun for the whole family</h2>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dd3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Select and Option
-        </button>
-            <div class="dropdown-menu" aria-labelledby="dd3">
-                <button class="dropdown-item" type="button" value="1">1 (Strongly Disagree)</button>
-                <button class="dropdown-item" type="button" value="2">2</button>
-                <button class="dropdown-item" type="button" value="3">3</button>
-                <button class="dropdown-item" type="button" value="4">4</button>
-                <button class="dropdown-item" type="button" value="5">5 (Strongly Agree)</button>
-            </div>
-    </div>
-    <br>
-    
-    <h1>Question 4</h1>
-    <h2>Intelligent life exists outside of our solar system</h2>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dd4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Select and Option
-        </button>
-            <div class="dropdown-menu" aria-labelledby="dd4">
-                <button class="dropdown-item" type="button" value="1">1 (Strongly Disagree)</button>
-                <button class="dropdown-item" type="button" value="2">2</button>
-                <button class="dropdown-item" type="button" value="3">3</button>
-                <button class="dropdown-item" type="button" value="4">4</button>
-                <button class="dropdown-item" type="button" value="5">5 (Strongly Agree)</button>
-            </div>
-    </div>
-    <br>
-    
-    <h1>Question 5</h1>
-    <h2>Gamers are sexy</h2>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dd5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Select and Option
-        </button>
-            <div class="dropdown-menu" aria-labelledby="dd5">
-                <button class="dropdown-item" type="button" value="1">1 (Strongly Disagree)</button>
-                <button class="dropdown-item" type="button" value="2">2</button>
-                <button class="dropdown-item" type="button" value="3">3</button>
-                <button class="dropdown-item" type="button" value="4">4</button>
-                <button class="dropdown-item" type="button" value="5">5 (Strongly Agree)</button>
-            </div>
-    </div>
-    <br>
-    
-    <h1>Question 6</h1>
-    <h2>Being stupid should be painful</h2>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dd6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Select and Option
-        </button>
-            <div class="dropdown-menu" aria-labelledby="dd6">
-                <button class="dropdown-item" type="button" value="1">1 (Strongly Disagree)</button>
-                <button class="dropdown-item" type="button" value="2">2</button>
-                <button class="dropdown-item" type="button" value="3">3</button>
-                <button class="dropdown-item" type="button" value="4">4</button>
-                <button class="dropdown-item" type="button" value="5">5 (Strongly Agree)</button>
-            </div>
-    </div>
-    <br>
-    
-    <h1>Question 7</h1>
-    <h2>Weird is better than Cool</h2>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dd7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Select and Option
-        </button>
-            <div class="dropdown-menu" aria-labelledby="dd7">
-                <button class="dropdown-item" type="button" value="1">1 (Strongly Disagree)</button>
-                <button class="dropdown-item" type="button" value="2">2</button>
-                <button class="dropdown-item" type="button" value="3">3</button>
-                <button class="dropdown-item" type="button" value="4">4</button>
-                <button class="dropdown-item" type="button" value="5">5 (Strongly Agree)</button>
-            </div>
-    </div>
-    <br>
-    
-    <h1>Question 8</h1>
-    <h2>Disco deserves a comeback</h2>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dd8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Select and Option
-        </button>
-            <div class="dropdown-menu" aria-labelledby="dd8">
-                <button class="dropdown-item" type="button" value="1">1 (Strongly Disagree)</button>
-                <button class="dropdown-item" type="button" value="2">2</button>
-                <button class="dropdown-item" type="button" value="3">3</button>
-                <button class="dropdown-item" type="button" value="4">4</button>
-                <button class="dropdown-item" type="button" value="5">5 (Strongly Agree)</button>
-            </div>
-    </div>
-    <br>
-    
-    <h1>Question 9</h1>
-    <h2>Cats Smell Funny</h2>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dd9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Select and Option
-        </button>
-            <div class="dropdown-menu" aria-labelledby="dd9">
-                <button class="dropdown-item" type="button" value="1">1 (Strongly Disagree)</button>
-                <button class="dropdown-item" type="button" value="2">2</button>
-                <button class="dropdown-item" type="button" value="3">3</button>
-                <button class="dropdown-item" type="button" value="4">4</button>
-                <button class="dropdown-item" type="button" value="5">5 (Strongly Agree)</button>
-            </div>
-    </div>
-    <br>
-    
-    <h1>Question 10</h1>
-    <h2>It is absolutely possible to fold space</h2>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dd10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Select and Option
-        </button>
-            <div class="dropdown-menu" aria-labelledby="dd10">
-                <button class="dropdown-item" type="button" value="1">1 (Strongly Disagree)</button>
-                <button class="dropdown-item" type="button" value="2">2</button>
-                <button class="dropdown-item" type="button" value="3">3</button>
-                <button class="dropdown-item" type="button" value="4">4</button>
-                <button class="dropdown-item" type="button" value="5">5 (Strongly Agree)</button>
-            </div>
-    </div>
-    
-    <br>
-    <br>
-    
     <!-- Submit Button -->
-    <button type="submit" class="btn btn-dark btn-lg" id="submit">Submit</button>
-   
-    <hr>
-    
+    <div class="form-group">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="">
+            <label class="form-check-label">
+                I Like Cheese
+            </label>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-dark btn-lg" id="submit">
+        Submit
+    </button>
+
+    <hr />
+
     <footer class="footer">
         <div class="container">
-            <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/sandtr0ut/friend-finder">GitHub Repo</a></p>
+            <p>
+                <a href="/api/friends">API Friends List</a> |
+                <a href="https://github.com/sandtr0ut/friend-finder">GitHub Repo</a>
+            </p>
         </div>
     </footer>
-    
-    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
-    <!-- Client-Side Logic -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- Matchmaking Logic -->
     <script>
-    $("#submit").on("click", function(event) {
-        event.preventDefault();
-        
-        var answers = {
-            name: $("#name").val(),
-            photo: $("#photo").val(),
-            scores: [
-                $("dd1").val(),
-                $("dd2").val(),
-                $("dd3").val(),
-                $("dd4").val(),
-                $("dd5").val(),
-                $("dd6").val(),
-                $("dd7").val(),
-                $("dd8").val(),
-                $("dd9").val(),
-                $("dd10").val(),
-            ]
-        };
-        
-        console.log(answers);
-        
-        // post user info to api and receive results of the compatibility test
-        $.post("/api/friends", answers, function(data) {
-            console.log(data);
-        })
-        
-    })
+        $('#submit').on('click', function (event) {
+            event.preventDefault();
+
+            var answers = {
+                name: $('#name').val(),
+                photo: $('#photo').val(),
+                scores: [
+                    $('dd1').val(),
+                    $('dd2').val(),
+                    $('dd3').val(),
+                    $('dd4').val(),
+                    $('dd5').val(),
+                    $('dd6').val(),
+                    $('dd7').val(),
+                    $('dd8').val(),
+                    $('dd9').val(),
+                    $('dd10').val()
+                ]
+            };
+            console.log(answers);
+
+            if (answers.scores.length < 10) {
+
+            }
+
+            // post user info to api and receive results of the compatibility test
+            $.post('/api/friends', answers, function (data) {
+                console.log(data);
+            });
+        });
     </script>
 </body>
 
 </html>
+
+<!-- <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="dd1"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Select an Option
+              </button> -->
+<!-- <select class="answer-select" aria-labelledby="dd1">
+                <button class="dropdown-item" type="button" value="1">
+                  1 (Strongly Disagree)
+                </button>
+                <button class="dropdown-item" type="button" value="2">2</button>
+                <button class="dropdown-item" type="button" value="3">3</button>
+                <button class="dropdown-item" type="button" value="4">4</button>
+                <button class="dropdown-item" type="button" value="5">
+                  5 (Strongly Agree)
+                </button>
+              </select> -->
