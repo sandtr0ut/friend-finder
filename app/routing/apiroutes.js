@@ -6,40 +6,46 @@ module.exports = app => {
   });
 
   app.post('/api/friends', function(req, res) {
-    var bestMatch = {
+    const bestMatch = {
       name: '',
       photo: '',
       scoreDifference: 0
     };
 
-    var userInfo = req.body;
-    var userScores = userInfo.scores;
+    const userData = req.body;
+    const userScores = userData.scores;
 
-    var totalDifference;
+    let totalDifference;
+    var scoreDifference = bestMatch.scoreDifference;
 
-    for (var i = 0; i < friends.length; i++) {
-      var currentFriend = friends[i];
+    friends.forEach((e, i, arr) => {
+      let currentFriend = friends[i];
       totalDifference = 0;
 
-      console.log(currentFriend.name);
-
-      for (var j = 0; j < currentFriend.scores.length; j++) {
-        var currentFriendScore = currentFriend.scores[j];
-        var currentUserScore = userScores[j];
+      const friendScores = currentFriend.scores;
+      console.log('currentFriend= ' + currentFriend.name);
+      friendScores.forEach((item, j, array) => {
+        let currentFriendScore = currentFriend.scores[j];
+        let currentUserScore = userScores[j];
 
         totalDifference += Math.abs(
           parseInt(currentUserScore) - parseInt(currentFriendScore)
         );
-      }
+      });
+      console.log('totalDifference= ' + totalDifference);
+      console.log('scoreDifference= ' + scoreDifference);
 
-      if (totalDifference <= bestMatch.friendDifference) {
+      if (totalDifference <= scoreDifference || scoreDifference === 0) {
         bestMatch.name = currentFriend.name;
         bestMatch.photo = currentFriend.photo;
-        bestMatch.friendDifference = totalDifference;
+        scoreDifference = totalDifference;
       }
-    }
+      console.log(bestMatch.name);
 
-    friends.push(req.body);
+      console.log(bestMatch);
+    });
+
+    friends.push(userData);
     res.json(bestMatch);
   });
 };
