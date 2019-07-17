@@ -1,4 +1,4 @@
-var friends = require('../data/friends/');
+var friends = require('../data/friends');
 
 module.exports = app => {
   app.get('/api/friends', function(req, res) {
