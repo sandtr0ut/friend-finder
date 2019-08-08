@@ -9,32 +9,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style/style.css">
+
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
     <title>Survey</title>
-
-    <style>
-        .select-answer::-ms-expand {
-            display: none;
-        }
-
-        .select-answer:hover {
-            border-color: #888;
-        }
-
-        .select-answer:focus {
-            border-color: #aaa;
-            box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
-            box-shadow: 0 0 0 3px -moz-mac-focusring;
-            color: #222;
-            outline: none;
-        }
-
-        .select-answer option {
-            font-weight: normal;
-        }
-    </style>
 </head>
 
 <body>
@@ -54,13 +34,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/survey">Survey<span class="sr-only">(current)</span></a>
                     </li>
-
                 </ul>
             </div>
         </nav>
 
 
-        <h1>Please complete the survey.</h1>
+        <h1>They say that great minds think alike!</h1>
+        <h2>(...but we're still confident some may think like you)</h2>
+        <h1>Please complete the survey to find out.</h1>
         <hr>
         <form>
             <div class="form-row">
@@ -81,7 +62,6 @@
                         required>
                 </div>
             </div>
-
         </form>
 
         <div>
@@ -288,7 +268,6 @@
                     <button class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -339,26 +318,3 @@
 </body>
 
 </html>
-
-<!-- <div class="dropdown">
-              <button
-                class="btn btn-secondary dropdown-toggle"
-                type="button"
-                id="dd1"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Select an Option
-              </button> -->
-<!-- <select class="answer-select" aria-labelledby="dd1">
-                <button class="dropdown-item" type="button" value="1">
-                  1 (Strongly Disagree)
-                </button>
-                <button class="dropdown-item" type="button" value="2">2</button>
-                <button class="dropdown-item" type="button" value="3">3</button>
-                <button class="dropdown-item" type="button" value="4">4</button>
-                <button class="dropdown-item" type="button" value="5">
-                  5 (Strongly Agree)
-                </button>
-              </select> -->

@@ -3,10 +3,11 @@ var friends = require('../data/friends');
 module.exports = app => {
   app.get('/api/friends', function(req, res) {
     res.json(friends);
+    console.log(friends);
   });
 
   app.post('/api/friends', function(req, res) {
-    const bestMatch = {
+    const bff = {
       name: '',
       photo: '',
       scoreDifference: 0
@@ -16,7 +17,7 @@ module.exports = app => {
     const userScores = userData.scores;
 
     let totalDifference;
-    var scoreDifference = bestMatch.scoreDifference;
+    var scoreDifference = bff.scoreDifference;
 
     friends.forEach((e, i, arr) => {
       let currentFriend = friends[i];
@@ -36,16 +37,18 @@ module.exports = app => {
       console.log('scoreDifference= ' + scoreDifference);
 
       if (totalDifference <= scoreDifference || scoreDifference === 0) {
-        bestMatch.name = currentFriend.name;
-        bestMatch.photo = currentFriend.photo;
+        bff.name = currentFriend.name;
+        bff.photo = currentFriend.photo;
         scoreDifference = totalDifference;
       }
-      console.log(bestMatch.name);
+      console.log(bff.name);
 
-      console.log(bestMatch);
+      console.log(bff);
     });
 
     friends.push(userData);
-    res.json(bestMatch);
+    res.json(bff);
+
+    console.log(friends);
   });
 };
