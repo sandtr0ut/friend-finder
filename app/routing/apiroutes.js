@@ -3,7 +3,6 @@ var friends = require('../data/friends');
 module.exports = app => {
   app.get('/api/friends', function(req, res) {
     res.json(friends);
-    console.log(friends);
   });
 
   app.post('/api/friends', function(req, res) {
@@ -24,7 +23,7 @@ module.exports = app => {
       totalDifference = 0;
 
       const friendScores = currentFriend.scores;
-      console.log('currentFriend= ' + currentFriend.name);
+
       friendScores.forEach((item, j, array) => {
         let currentFriendScore = currentFriend.scores[j];
         let currentUserScore = userScores[j];
@@ -33,22 +32,15 @@ module.exports = app => {
           parseInt(currentUserScore) - parseInt(currentFriendScore)
         );
       });
-      console.log('totalDifference= ' + totalDifference);
-      console.log('scoreDifference= ' + scoreDifference);
 
       if (totalDifference <= scoreDifference || scoreDifference === 0) {
         bff.name = currentFriend.name;
         bff.photo = currentFriend.photo;
         scoreDifference = totalDifference;
       }
-      console.log(bff.name);
-
-      console.log(bff);
     });
 
     friends.push(userData);
     res.json(bff);
-
-    console.log(friends);
   });
 };

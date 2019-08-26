@@ -1,3 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+nav a {
+    font-size: 1rem;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+h1, h2, h3, h4, h5, p {
+    font-family: 'Nunito', sans-serif;
+}
+
 .select-answer::-ms-expand {
     display: none;
 }

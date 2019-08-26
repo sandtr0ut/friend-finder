@@ -1,26 +1,25 @@
 {
-  "name": "friend-finder",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sandtr0ut/friend-finder.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sandtr0ut/friend-finder/issues"
-  },
-  "homepage": "https://github.com/sandtr0ut/friend-finder#readme",
-  "dependencies": {
-    "express": "^4.16.4",
-    "mysql": "^2.17.1",
-    "path": "^0.12.7"
-  }
+    "name": "friend-finder",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sandtr0ut/friend-finder.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/sandtr0ut/friend-finder/issues"
+    },
+    "homepage": "https://github.com/sandtr0ut/friend-finder#readme",
+    "dependencies": {
+        "express": "^4.16.4",
+        "path": "^0.12.7"
+    }
 }
